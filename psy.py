@@ -88,7 +88,7 @@ def main():
         if all_corpus == ' ' or all_corpus == '':
             all_corpus = 'vide'
         all_wc = WordCloud(background_color="#0E1117", repeat=False, relative_scaling=1)
-        all_wc.generate(pedopsy_corpus)
+        all_wc.generate(all_corpus)
         st.image(all_wc.to_array()) 
         all_counter = Counter(all_corpus.split(' ')).most_common()
         all_words=[i[0] for i in all_counter[:word_nb]]
